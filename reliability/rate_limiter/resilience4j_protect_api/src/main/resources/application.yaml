@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: resilience4j_protect_api
+
+  threads:
+    virtual:
+      enabled: true
+
+
+resilience4j.ratelimiter:
+  instances:
+    apiRestController:
+      limitForPeriod: 5        # Maximum 5 requests
+      limitRefreshPeriod: 60s  # Time window is 60 seconds
+      timeoutDuration: 0       # If limit exceeded, fail immediately (timeout)
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+  endpoint:
+    health:
+      show-details: always
