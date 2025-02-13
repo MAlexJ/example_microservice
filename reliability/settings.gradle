@@ -1,0 +1,4 @@
+rootProject.name = 'reliability'
+
+include 'rate_limiter',
+        'rate_limiter:resilience4j_protect_api'
