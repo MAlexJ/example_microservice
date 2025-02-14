@@ -2,4 +2,5 @@ rootProject.name = 'example_microservice'
 
 include 'reliability',
         'reliability:rate_limiter',
-        'reliability:rate_limiter:resilience4j_protect_api'
+        'reliability:rate_limiter:resilience4j_protect_api',
+        'admin_server'

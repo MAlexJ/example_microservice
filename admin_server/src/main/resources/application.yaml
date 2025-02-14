@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: admin_server
+
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  port: 8888
