@@ -14,7 +14,7 @@ spring:
 resilience4j.ratelimiter:
   instances:
     apiRestController:
-      limitForPeriod: 5        # Maximum 5 requests
+      limitForPeriod: 10        # Maximum 10 requests
       limitRefreshPeriod: 60s  # Time window is 60 seconds
       timeoutDuration: 0       # If limit exceeded, fail immediately (timeout)
       registerHealthIndicator: true

@@ -44,6 +44,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation "org.springframework.boot:spring-boot-starter-aop"
     implementation "io.github.resilience4j:resilience4j-spring-boot3:${resilience4jSpringBoot3Version}"
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     implementation 'de.codecentric:spring-boot-admin-starter-client'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
