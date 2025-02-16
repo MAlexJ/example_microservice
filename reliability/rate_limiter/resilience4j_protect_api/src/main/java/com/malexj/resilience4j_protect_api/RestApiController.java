@@ -15,6 +15,7 @@ public class RestApiController {
   @RateLimiter(name = "apiRestController")
   @GetMapping
   public ResponseEntity<String> info() {
-    return ResponseEntity.ok("info");
+    String info = "Hello World!";
+    return ResponseEntity.ok(info);
   }
 }

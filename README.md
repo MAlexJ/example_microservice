@@ -129,6 +129,31 @@ git commit -m "Changing permission of gradlew"
 git push
 ```
 
+#### Live Remote Debugging jar file
+
+##### 1. Start Your Spring Boot Application with Remote Debugging Enabled
+
+Run your JAR file with the following command:
+
+```
+java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005 -jar your-app.jar
+```
+
+Alternatively, for Java 9 and later:
+
+```
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address='*:5005' -jar your-app.jar
+```
+
+##### 3. Connect from Your IDE (IntelliJ IDEA / VS Code / Eclipse)
+
+For IntelliJ IDEA:
+
+* Go to Run → Edit Configurations.
+* Click + and select Remote JVM Debug.
+* Set the host and port (e.g., remote server IP and port 5005).
+* Click Apply & Debug.
+
 ### Gradle
 
 #### Gradle Versions Plugin
